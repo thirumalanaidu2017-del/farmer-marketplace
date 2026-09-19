@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:label="Farmer Marketplace"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Meta-data for Google Maps API key: replace with your own key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_GOOGLE_MAPS_API_KEY" />
+
+        <activity android:name=".auth.LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".auth.RegisterActivity" android:exported="false" />
+
+        <activity android:name=".customer.SearchActivity" android:exported="false" />
+        <activity android:name=".customer.FarmerProfileActivity" android:exported="false" />
+
+        <activity android:name=".farmer.FarmerDashboardActivity" android:exported="false" />
+        <activity android:name=".farmer.AddListingActivity" android:exported="false" />
+
+        <activity android:name=".admin.AdminDashboardActivity" android:exported="false" />
+
+    </application>
+</manifest>
